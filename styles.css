@@ -147,9 +147,10 @@ body.light-theme {
 
 /* Sections */
 section {
-  padding: 5rem 2rem;
+  padding: 6rem 2rem 5rem;
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 90px;
 }
 
 h2 {
@@ -174,15 +175,17 @@ h2::after {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 100px;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 700px;
+  width: 100%;
   z-index: 2;
   animation: fadeInUp 1s ease-out;
 }
@@ -353,10 +356,9 @@ h2::after {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
-  
 }
 
 .about-container {
@@ -391,7 +393,7 @@ h2::after {
 .skills {
   background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -448,7 +450,7 @@ h2::after {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -510,7 +512,7 @@ h2::after {
 .projects {
   background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -608,7 +610,7 @@ h2::after {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -656,7 +658,7 @@ h2::after {
 .statistics {
   background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -699,7 +701,7 @@ h2::after {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: 2rem;
+  margin: 0 auto;
   padding: 3rem;
   box-shadow: var(--shadow);
 }
@@ -725,12 +727,18 @@ h2::after {
 input, textarea {
   width: 100%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--glass-border);
+  background: #ffffff;
+  border: 1px solid #cccccc;
   border-radius: 10px;
-  color: var(--text-color);
+  color: #111111;
   font-family: 'Poppins', sans-serif;
   transition: var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666666;
+  opacity: 1;
 }
 
 input:focus, textarea:focus {
@@ -809,6 +817,11 @@ footer {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-links {
